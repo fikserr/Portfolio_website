@@ -1,0 +1,111 @@
+.navbar{
+    padding:  24px 0;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+            color:  #000;
+            font-family: 'Sora';
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px; 
+            letter-spacing: -0.4px;
+            text-transform: capitalize;
+            text-decoration: none;
+   
+    }
+
+    &__links{
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
+    &__link{
+        color:  #000;
+        font-family:'Sora';
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: -0.4px;
+        text-transform: capitalize;
+        text-decoration: none;
+        transition: 0.5s;
+        padding: 16px;
+        &.active{
+
+            border: 1px solid #000;
+        }
+    }
+
+    &__flag{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: none;
+        border: none;
+        position: relative;
+        z-index: 999;
+        height: 40px;
+        &_english {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.5s;
+            position: absolute;
+            top: -300px;
+            bottom: 0;
+            &.active{
+                top: 0px;
+                bottom: 0;
+            }
+             & img{
+                height: 40px;
+                width: 70px;
+             }
+             & p{
+                color:  #000;
+                font-family:'Sora';
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: -0.4px;
+                text-transform: capitalize;
+                text-decoration: none;
+             }
+
+        }
+        &_uzbek{
+            position: absolute;
+            top: 0px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            top: -300px;
+            &.active{
+                top: 0px;
+                bottom: 0;
+            }
+            & img{
+                height: 40px;
+                width: 70px;
+             }
+             & p{
+                color:  #000;
+                font-family:'Sora';
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: -0.4px;
+                text-transform: capitalize;
+                text-decoration: none;
+             }
+        }
+    }
+
+}
