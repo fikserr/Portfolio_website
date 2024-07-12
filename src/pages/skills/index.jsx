@@ -1,4 +1,5 @@
 import Container from '../../layout/container'
+import Experience from '../experience'
 import styles from './skills.module.scss'
 
 function Skills() {
@@ -51,8 +52,13 @@ function Skills() {
         </div>
 
       </Container>
+      <Experience/>
     </div>
   )
 }
 
 export default Skills
+
+
+
+

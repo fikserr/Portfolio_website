@@ -1,5 +1,5 @@
 .skills{
-    padding: 60px 0;
+    padding-top: 60px;
     &__container{
         display: flex;
         flex-direction: column;
@@ -62,4 +62,28 @@
             text-align: center;
         }
     }
+}
+
+
+@media screen and (max-width: 500px) {
+    .skills{
+        padding: 40px 0;
+
+        &__title{
+            font-size: 28px;
+        }
+        &__content{
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 20px 0;
+            gap: 10px;
+        }
+        &__card{
+            padding: 18px;
+            width: 162px;
+            height: 162px;
+        }
+    }
+
+    
 }

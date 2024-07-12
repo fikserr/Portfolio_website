@@ -1,0 +1,148 @@
+.contact{
+    margin: 55px 0;
+    padding: 60px 0;
+    &__container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__left{
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+        &_input,&_comment{
+            height: 56px;
+            padding: 16px 24px;
+            border-radius: 4px;
+            border: 1.4px solid  #000;
+            color:  #71717A;
+            font-family: 'Sora';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: -0.32px;
+        }
+        &_comment{
+            height: 140px;
+            text-align: start;
+        }
+    }
+
+    &__links{
+        display: flex;
+        width: 65px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        border: 2px solid #000;
+        transition: 0.5s;
+        padding: 16px;
+        &:hover{
+            background: #000;
+            & svg{
+                fill: white;
+                & path{
+                    fill: white;
+                }
+            }
+        }
+    }
+
+    &__buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__btn{
+        padding: 18px 20px;
+        border-radius: 4px;
+        background:  #000;
+        color: #FFF;
+        font-family:'Sora';
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px; 
+        letter-spacing: 0.4px;
+    }
+
+    &__right{
+        width: 608px;   
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &_title{
+            color:  #000;
+            font-family: 'Sora';
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 56px;
+            letter-spacing: -0.96px;
+        }
+        &_text{
+            color: #71717A;
+            font-family: 'Sora';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.32px;
+        }
+        &_email,&_number{
+            padding-top: 20px;
+            color:  #000;
+            font-family: 'Sora';
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 32px;
+            letter-spacing: -0.56px;
+        }
+        &_number{
+            padding-top: 16px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width:500px) {
+    .contact{
+        padding: 40px 0;
+
+        &__container{
+            flex-wrap: wrap;
+        }
+
+        &__left{
+            width: 100%;
+            
+        }
+        &__links{
+            margin-top: 20px;
+        }
+        &__buttons{
+            flex-wrap: wrap;
+        }
+        &__btn{
+            width: 100%;
+        }
+
+        &__right{
+            width: 100%;  
+            gap: 32px; 
+            &_title{
+                font-size: 28px;
+            }
+            &_email,&_number{
+                font-size: 18px;
+            }
+            &_number{
+                padding-top: 16px;
+            }
+        }
+    }
+  }
+
+
+

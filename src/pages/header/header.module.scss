@@ -1,0 +1,106 @@
+.header {
+  padding: 60px 0;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 600px;
+  }
+  &__title {
+    padding-top: 20px;
+    color: #000;
+    font-family: "Sora";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 76px;
+    letter-spacing: -0.96px;
+    & span {
+      font-weight: 800;
+    }
+  }
+  &__text {
+    color: #71717a;
+    font-family: "Sora";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    padding-bottom: 20px;
+  }
+  &__social {
+    display: flex;
+    gap: 32px;
+    &_links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 4px;
+      border: 2px solid #000;
+      transition: 0.5s;
+      &:hover {
+        background: #000;
+        & svg {
+          fill: white;
+          & path {
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+  &__right {
+    width: 796px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #000;
+  }
+  &__image {
+    object-fit: cover;
+    object-position: center;
+    height: 650px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    padding: 60px 0;
+    &__container {
+      flex-wrap: wrap-reverse;
+    }
+    &__left {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 600px;
+    }
+    &__title {
+      padding: 0px;
+      font-size: 28px;
+      line-height: 32px;
+    }
+    &__social {
+      display: flex;
+      gap: 32px;
+      &_links {
+        width: 48px;
+        height: 48px;
+
+      }
+    }
+
+    &__right {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    &__image {
+      height: 332px;
+    }
+  }
+}

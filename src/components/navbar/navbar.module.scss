@@ -50,7 +50,7 @@
         background: none;
         border: none;
         position: relative;
-        z-index: 999;
+        z-index: 2;
         height: 40px;
         &_english {
             display: flex;
@@ -82,11 +82,11 @@
         }
         &_uzbek{
             position: absolute;
-            top: 0px;
             display: flex;
             align-items: center;
             gap: 8px;
             top: -300px;
+            z-index: 1;
             &.active{
                 top: 0px;
                 bottom: 0;
@@ -109,3 +109,41 @@
     }
 
 }
+
+
+
+@media screen and (max-width:500px) {
+    .navbar {
+        padding:  16px 0;
+
+        &__links{
+            display: none;
+        }
+
+        &__flag{
+            height: 20px;
+            &_english {
+                left: -60px;
+                 & img{
+                    height: 20px;
+                    width: 35px;
+                 }
+                 & p{
+                    font-size: 12px;
+                 }
+    
+            }
+            &_uzbek{
+                left: -60px;
+
+                & img{
+                    height: 20px;
+                    width: 35px;
+                 }
+                 & p{
+                    font-size: 12px;
+                 }
+            }
+        }
+    } 
+  }

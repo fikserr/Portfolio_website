@@ -4,11 +4,12 @@ import styles from './navbar.module.scss'
 import uzbek from '../../images/uzbek.png'
 import english from '../../images/enlish.jpg'
 import classNames from 'classnames'
-import { useState } from 'react'
+import { useContext} from 'react'
+import { Context } from '../../Context'
 
 
 function Navbar() {
-  const [active,setActive] = useState(false)
+  const {flag,changeLang} = useContext(Context)
   return (
     <div className={styles.navbar}>
       <Container className={styles.navbar__container}>
@@ -28,12 +29,12 @@ function Navbar() {
 
         </div>
         
-        <button className={styles.navbar__flag} onClick={()=>setActive(!active)}>
-              <div className={classNames(styles.navbar__flag_english, active == false ? styles.active : "")}>
+        <button className={styles.navbar__flag} onClick={()=>changeLang(!flag)}>
+              <div className={classNames(styles.navbar__flag_english, flag ? styles.active : "")}>
                 <img src={english} alt="english" />
                 <p>EN</p>
               </div>
-              <div className={classNames(styles.navbar__flag_uzbek, active ? styles.active : "")}>
+              <div className={classNames(styles.navbar__flag_uzbek, flag == false ? styles.active : "")}>
                 <img src={uzbek} alt="uzbek" />
                 <p>UZ</p>
               </div>

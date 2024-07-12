@@ -1,0 +1,99 @@
+.experience{
+    padding-top: 60px;
+    background:  #000;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    &__title{
+        color: #FFF;
+        font-family:' Sora';
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 56px;
+        letter-spacing: -0.96px;
+        & span{
+            font-weight: 800;
+        }
+    }
+
+    &__content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        padding: 30px 24px;
+        border-radius: 10px;
+        border: 1px solid  #71717A;
+        &_top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &_logoText{
+            display: flex;
+            align-items: center;
+            color:  #FFF;
+            font-family: 'Sora';
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 28px; 
+            letter-spacing: -0.48px;
+             & svg {
+                margin-right: 30px;
+             }
+        }
+        &_rightText{
+            color:  #D4D4D8;
+            font-family: 'Sora';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: -0.32px;
+        }
+        &_text{
+            color:  #D4D4D8;
+            font-family: 'Sora';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px; 
+            letter-spacing: 0.32px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width:500px) {
+    .experience{
+        padding: 40px 0;
+        &__title{
+            font-size: 28px;
+        }
+        &__card{
+
+            &_top{
+                flex-wrap: wrap;
+            }
+            &_logoText{
+                font-size: 20px;
+            }
+            &_rightText{
+                padding-top: 30px;
+            }
+        }
+
+    }
+
+
+  }
